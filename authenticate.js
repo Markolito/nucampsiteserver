@@ -38,3 +38,12 @@ exports.jwtPassport = passport.use(
 );
 
 exports.verifyUser = passport.authenticate('jwt', {session: false});
+
+exports.verifyAdmin = function (req, res, next) {
+    if (req.user.admin){
+        return next();
+    } else {
+        res.status = 403;
+        throw new Error( "You are not authorized to perform this operation!");
+    }
+}
