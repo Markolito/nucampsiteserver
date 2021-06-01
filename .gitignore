@@ -1,2 +1,4 @@
 node_modules
 test.json
+bin/server.key
+bin/server.cert
