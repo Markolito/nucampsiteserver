@@ -1,4 +1,5 @@
 node_modules
 test.json
+config.js
 bin/server.key
 bin/server.cert
